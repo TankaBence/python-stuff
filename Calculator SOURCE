@@ -1,0 +1,46 @@
+import math
+
+szam1 = input("Első szám: ")
+szam2 = input("Második szám: ")
+muv = input("Elvégzendő művelet(+-*/ or root): ")
+if szam1.isalpha() and szam2.isalpha():
+    print("Invalid inputs")
+elif szam1 == "" or szam2 == "":
+    if muv == "+":
+        megold = int(szam1) + 0
+        print("A megoldás: " + str(megold))
+    elif muv == "-":
+        megold = int(szam1) - 0
+        print("A megoldás: " + str(megold))
+    elif muv == "*":
+        megold = int(szam1) * int(1)
+        print(str("A megoldás: " + str(megold)))
+    elif muv == "/":
+        megold = int(szam1) / int(1)
+        print(str("A megoldás: " + str(megold)))
+    elif muv== "root":
+        megold1 = math.sqrt(int(szam1))
+        print(str(megold1))
+    else:
+        print("Meghatározatlan művelet!")
+elif szam1.isdigit() and szam2.isdigit():
+    if muv == "+":
+        megold = int(szam1) + int(szam2)
+        print("A megoldás: " + str(megold))
+    elif muv == "-":
+        megold = int(szam1) - int(szam2)
+        print("A megoldás: " + str(megold))
+    elif muv == "*":
+        megold = int(szam1) * int(szam2)
+        print("A megoldás: " + str(megold))
+    elif muv == "/":
+        megold = int(szam1) / int(szam2)
+        print("A megoldás: " + str(megold))
+    elif muv== "root":
+        megold1 = math.sqrt(int(szam1))
+        megodl2 = math.sqrt(int(szam2))
+        print(str(megold1) + " and " + str(megodl2))
+    else:
+        print("Meghatározatlan művelet!")
+print("")
+input("Press enter to exit...")
