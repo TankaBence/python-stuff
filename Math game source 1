@@ -1,0 +1,23 @@
+import random
+print("---MathGame---\n1. Play\n2. Settings\n--------------")
+sel1 = int(input(""))
+if sel1 == 1:
+	secret = random.randint(1,10)
+	elso = int(input("Első tipp: "))
+	if elso == secret:
+		print("Kitaláltad!")
+	elif elso != secret:
+		if elso < secret:
+			print("Nagyobb")
+		elif elso > secret:
+			print("Kisebb")
+		while True:
+			valasz = int(input("Következő tipp: "))
+			if valasz == secret:
+				print("Kitaláltad")
+				break
+			elif valasz != secret:
+				if valasz < secret:
+					print("Kisebb")
+				elif valasz > secret:
+					print("Nagyobb")
